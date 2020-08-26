@@ -1,0 +1,18 @@
+
+<h3>問題</h3>
+<div>
+  <%= @question.problem_statement %>
+</div>
+  <%= form_with local: true do |f| %>
+  <h3>解答</h3>
+    <%= f.text_area :correct_answer, placeholder:"解答文"%>
+    <div id="see_answer">
+      答えを見る
+    </div>
+    <div>
+      アクティブハッシュを用いたプルダウン
+    </div>
+    <div>
+      <%= f.submit "終了する" %>
+    </div>
+  <% end %>
