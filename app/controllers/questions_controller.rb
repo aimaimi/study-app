@@ -13,6 +13,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def index
+    @questions = Question.all.where(user_id: current_user.id)
+  end
+
   private
 
   def question_params

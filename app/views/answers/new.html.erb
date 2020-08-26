@@ -1,0 +1,17 @@
+
+<h3>問題</h3>
+<div>
+  <%= @question.problem_statement %>
+</div>
+<%= form_with url: question_answers_path(@question.id), local: true do |f| %>
+<h3>解答</h3>
+<%= f.text_area :answer, placeholder:"解答文"%>
+<div id="see_answer">
+  答えを見る
+</div>
+<div class="hidden", id="feedback">
+  <div>答え <%= @question.correct_answer %></div>
+  <div><%= f.collection_select(:feedback_id, Feedback.all, :id, :name, {}, {}) %></div>
+  <div><%= f.submit "終了する" %></div>
+</div>
+<% end %>

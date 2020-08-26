@@ -1,0 +1,7 @@
+<h2>問題一覧</h2>
+<% @questions.each do |question| %>
+  <div>
+    <%= link_to "#{question.problem_statement}", "" %>
+    <%= link_to "問題を解く", new_question_answer_path(question.id) %>
+  </div>
+<% end %>
