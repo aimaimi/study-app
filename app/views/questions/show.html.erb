@@ -1,0 +1,22 @@
+<h2>問題文</h2>
+<%= @question.problem_statement %>
+<h2>答え</h2>
+<%= @question.correct_answer %>
+<h2>今までの解答</h2>
+<% @answers.each do |answer| %>
+  <% i = 1 %>
+  <div>
+    <div>
+      <%= "#{i}回目の解答" %>
+    </div>
+    <div>
+      <%= answer.answer %>
+    </div>
+    <div>
+      <%= Feedback.find(answer.feedback_id).name %>
+    </div>
+  </div>
+  <% i += 1 %>
+<% end %>
+
+<%= link_to "問題一覧に戻る", questions_path %>
