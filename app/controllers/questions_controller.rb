@@ -17,6 +17,10 @@ class QuestionsController < ApplicationController
     @questions = Question.all.where(user_id: current_user.id)
   end
 
+  def show
+    
+  end
+
   private
 
   def question_params
