@@ -17,6 +17,11 @@ class QuestionsController < ApplicationController
     @questions = Question.all.where(user_id: current_user.id)
   end
 
+  def show
+    @question = Question.find(params[:id])
+    @answers = @question.answers
+  end
+
   private
 
   def question_params
