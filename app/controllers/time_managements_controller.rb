@@ -1,0 +1,2 @@
+class TimeManagementsController < ApplicationController
+end
