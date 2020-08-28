@@ -41,6 +41,7 @@ class QuestionsController < ApplicationController
       render 'show'
     end
   end
+
   private
 
   def question_params
