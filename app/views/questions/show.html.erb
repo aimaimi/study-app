@@ -8,6 +8,14 @@
 <div>
   <%= link_to "問題を編集する", edit_question_path(@question.id) %>
 </div>
+<div id="confirm_deletion">
+  問題を削除する
+</div>
+<div class="hidden", id="problem_delete">
+  本当に削除しますか？
+  <%= link_to "はい", question_path(@question.id), method: :delete %>
+  <span id="quit">いいえ</span>
+</div>
 <div>
   <%= link_to "問題一覧に戻る", questions_path %>
 </div>
