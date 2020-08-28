@@ -4,8 +4,9 @@
 <%= @question.problem_statement %>
 <h2>答え</h2>
 <%= @question.correct_answer %>
+
 <div>
-  <%= link_to "問題を編集する", edit_question_path %>
+  <%= link_to "問題を編集する", edit_question_path(@question.id) %>
 </div>
 <div>
   <%= link_to "問題一覧に戻る", questions_path %>
