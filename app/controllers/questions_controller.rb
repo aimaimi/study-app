@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
 
   def update
     if Question.find(params[:id]).update(question_params)
-      
+
       redirect_to question_path
     else
       render 'edit'
