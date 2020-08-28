@@ -4,6 +4,13 @@
 <%= @question.problem_statement %>
 <h2>答え</h2>
 <%= @question.correct_answer %>
+<div>
+  <%= link_to "問題を編集する", edit_question_path %>
+</div>
+<div>
+  <%= link_to "問題一覧に戻る", questions_path %>
+</div>
+
 <h2>今までの解答</h2>
 <% @answers.each do |answer| %>
   <% i = 1 %>
@@ -21,4 +28,3 @@
   <% i += 1 %>
 <% end %>
 
-<%= link_to "問題一覧に戻る", questions_path %>

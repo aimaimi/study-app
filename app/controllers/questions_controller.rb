@@ -22,6 +22,14 @@ class QuestionsController < ApplicationController
     @answers = @question.answers
   end
 
+  def edit
+    
+  end
+
+  def update
+
+  end
+  
   private
 
   def question_params
