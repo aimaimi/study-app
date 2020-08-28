@@ -1,3 +1,16 @@
 <%= render "shared/header" %>
 
 <h2>タイマー</h2>
+<form name="timer">
+  <input type="text", id="min", name="min">分
+  <input type="text", id="sec", name="sec">秒
+  <div>
+    <input type="button", value="スタート", id="start">
+    <input type="button", value="ストップ", id="stop">
+  </div>
+</form>
+
+<%# <audio controls id="sound", preload="auto"> 
+  <source src="pipi.mp3", type="audio/mp3" />
+  <source src="alarm.wav", type="audio/wav" />
+</audio> %>
