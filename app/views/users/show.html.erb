@@ -6,10 +6,10 @@
     <%= link_to "タイマー", time_managements_path, target: :_blank %>
   </div>
   <div>
-    <%= link_to "問題作成", new_question_path %>
+    <%= link_to "問題作成", new_user_question_path(@user.id) %>
   </div>
   <div>
-    <%= link_to "自作問題一覧", questions_path %>
+    <%= link_to "自作問題一覧", user_questions_path(@user.id) %>
   </div>
   <div>
     <%= link_to "ユーザー一覧", root_path %>

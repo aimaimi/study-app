@@ -2,5 +2,7 @@
 
 <h1>ユーザー一覧</h1>
 <% @users.each do |user| %>
-  <%= link_to "#{user.nickname}", user_path(user.id) %>
+  <div>
+    <%= link_to "#{user.nickname}", user_path(user.id) %>
+  </div>
 <% end %>

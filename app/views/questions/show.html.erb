@@ -6,23 +6,23 @@
 <%= @question.correct_answer %>
 
 <div>
-  <%= link_to "問題を編集する", edit_question_path(@question.id) %>
+  <%= link_to "問題を編集する", edit_user_question_path(@user.id,@question.id) %>
 </div>
 <div id="confirm_deletion">
   問題を削除する
 </div>
 <div class="hidden", id="problem_delete">
   本当に削除しますか？
-  <%= link_to "はい", question_path(@question.id), method: :delete %>
+  <%= link_to "はい", user_question_path(@user.id,@question.id), method: :delete %>
   <span id="quit">いいえ</span>
 </div>
 <div>
-  <%= link_to "問題一覧に戻る", questions_path %>
+  <%= link_to "戻る", user_questions_path(@user.id) %>
 </div>
 
 <h2>今までの解答</h2>
+<% i = 1 %>
 <% @answers.each do |answer| %>
-  <% i = 1 %>
   <div>
     <div>
       <%= "#{i}回目の解答" %>
@@ -34,6 +34,6 @@
       <%= Feedback.find(answer.feedback_id).name %>
     </div>
   </div>
-  <% i += 1 %>
+  <% i = i + 1 %>
 <% end %>
 
