@@ -5,17 +5,20 @@
 <h2>答え</h2>
 <%= @question.correct_answer %>
 
-<div>
-  <%= link_to "問題を編集する", edit_user_question_path(@user.id,@question.id) %>
-</div>
-<div id="confirm_deletion">
-  問題を削除する
-</div>
-<div class="hidden", id="problem_delete">
-  本当に削除しますか？
-  <%= link_to "はい", user_question_path(@user.id,@question.id), method: :delete %>
-  <span id="quit">いいえ</span>
-</div>
+<% if user_signed_in? && (current_user.id == @question.user_id) %>
+  <div>
+    <%= link_to "問題を編集する", edit_user_question_path(@user.id,@question.id) %>
+  </div>
+  <div id="confirm_deletion">
+    問題を削除する
+  </div>
+  <div class="hidden", id="problem_delete">
+    本当に削除しますか？
+    <%= link_to "はい", user_question_path(@user.id,@question.id), method: :delete %>
+    <span id="quit">いいえ</span>
+  </div>
+<% end %>
+
 <div>
   <%= link_to "戻る", user_questions_path(@user.id) %>
 </div>
