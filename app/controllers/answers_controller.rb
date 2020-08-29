@@ -2,13 +2,16 @@ class AnswersController < ApplicationController
   def new
     @answer = Answer.new
     @question = Question.find(params[:question_id])
+    @user = User.find(params[:user_id])
   end
 
   def create
+    @question = Question.find(params[:question_id])
+    @user = User.find(params[:user_id])
     @answer = Answer.new(answer_params)
     if @answer.valid?
       @answer.save
-      redirect_to questions_path
+      redirect_to user_questions_path(@user.id, @question.id)
     else
       @question = Question.find(params[:question_id])
       render :new

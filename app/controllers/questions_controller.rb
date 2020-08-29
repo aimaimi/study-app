@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   def new
     @question = Question.new
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -14,29 +15,36 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @questions = Question.all.where(user_id: current_user.id)
+    @user = User.find(params[:user_id])
+    @questions = Question.all.where(user_id: @user.id)
   end
 
   def show
     @question = Question.find(params[:id])
-    @answers = @question.answers
+    @answers = @question.answers.where(user_id: current_user.id)
+    @user = User.find(params[:user_id])
   end
 
   def edit
     @question = Question.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def update
+    @question = Question.find(params[:id])
+    @user = User.find(params[:user_id])
     if Question.find(params[:id]).update(question_params)
-      redirect_to question_path
+      redirect_to user_question_path(@user.id, @question.id)
     else
       render 'edit'
     end
   end
 
   def destroy
+    @question = Question.find(params[:id])
+    @user = User.find(params[:user_id])
     if Question.find(params[:id]).destroy
-      redirect_to questions_path
+      redirect_to user_questions_path(@user.id, @question.id)
     else
       render 'show'
     end

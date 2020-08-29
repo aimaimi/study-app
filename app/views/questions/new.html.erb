@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<%= form_with model: @question, local: true do |f| %>
+<%= form_with model: [@user,@question], local: true do |f| %>
   <h3>問題</h3>
     <%= f.text_area :problem_statement, placeholder:"問題文" %>
 
@@ -10,3 +10,7 @@
     <%= f.submit "問題作成" %>
   </div>
 <% end %>
+
+<div>
+  <%=  link_to "戻る", user_path(@user.id) %>
+</div>
