@@ -17,7 +17,6 @@ class QuestionsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @questions = Question.all.where(user_id: @user.id)
-    
   end
 
   def show
@@ -35,7 +34,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @user = User.find(params[:user_id])
     if Question.find(params[:id]).update(question_params)
-      redirect_to user_question_path(@user.id,@question.id)
+      redirect_to user_question_path(@user.id, @question.id)
     else
       render 'edit'
     end
@@ -45,7 +44,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @user = User.find(params[:user_id])
     if Question.find(params[:id]).destroy
-      redirect_to user_questions_path(@user.id,@question.id)
+      redirect_to user_questions_path(@user.id, @question.id)
     else
       render 'show'
     end

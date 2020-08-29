@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :time_managements
 
   def self.search(search)
-    if search != ""
+    if search != ''
       User.where('nickname LIKE(?)', "%#{search}%")
     else
       User.all
