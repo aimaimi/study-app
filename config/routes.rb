@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :questions do
       resources :answers, only: [:new, :create]
     end
+    collection do
+      get 'search'
+    end
   end
   resources :time_managements, only: [:index]
 end
