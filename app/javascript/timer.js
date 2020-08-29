@@ -1,7 +1,7 @@
 window.addEventListener('load', function(){
   const start = document.getElementById("start")
   const stop = document.getElementById("stop")
-  // const sound = document.getElementById("sound")
+  const sound = document.getElementById("sound")
 
   let timer1;
   
@@ -34,7 +34,7 @@ window.addEventListener('load', function(){
   function secWrite(int){
     if(int < 0){
       reset();
-      // sound.play();
+      sound.play();
       alert("時間です！");
     }else{
       document.timer.min.value = Math.floor(int / 60);
