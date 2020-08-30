@@ -4,12 +4,7 @@ window.addEventListener('load', function(){
   const reset = document.getElementById("reset")
   const sound = document.getElementById("sound")
   let timer1;
-
-  const time1 = new Date();
-  const hour = time1.getHours();
-  const minute = time1.getMinutes();
-  const second = time1.getSeconds();
-  let time2 = hour + ":" + minute + ":" + second;
+  let count = 0;
 
   const user = document.getElementById("user").innerHTML
 
@@ -28,6 +23,7 @@ window.addEventListener('load', function(){
   let countDown = function(){
     let min = document.getElementById("min").value
     let sec = document.getElementById("sec").value
+    count = count + 1
     if((min == "") && (sec == "")){
       alert("時間を設定してください！");
       reset();
@@ -61,9 +57,16 @@ window.addEventListener('load', function(){
   }
 
   function studyTime(){
+
+    let day = new Date();
+    const year = day.getFullYear();
+    const month = day.getMonth() + 1;
+    const date = day.getDate();
+    day = year + "-" + month + "-" + date;
+
     const XHR = new XMLHttpRequest();
     XHR.open("POST", `/users/${user}/time_managements`, true);
     XHR.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
-    XHR.send(time2);
+    XHR.send([day,count]);
   }
 })
