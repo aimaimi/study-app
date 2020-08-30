@@ -1,11 +1,16 @@
 <%= render "shared/header" %>
 
 <h2>問題一覧</h2>
+<% unless user_signed_in? %>
+  ユーザーが作成した問題を解くにはログインしてください。
+<% end %>
 <% @questions.each do |question| %>
   <div>
     <%= question.problem_statement %>
-    <%= link_to "詳細", user_question_path(@user.id,question.id) %>
-    <%= link_to "問題を解く", new_user_question_answer_path(@user.id,question.id) %>
+    <% if user_signed_in? %>
+      <%= link_to "詳細", user_question_path(@user.id,question.id) %>
+      <%= link_to "問題を解く", new_user_question_answer_path(@user.id,question.id) %>
+    <% end %>
   </div>
 <% end %>
 

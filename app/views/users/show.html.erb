@@ -2,15 +2,19 @@
 
 <%= @user.nickname %>
 <div>
-<% if user_signed_in? && (current_user.id == @user.id) %>
-  <div>
-    <%= link_to "タイマー", user_time_managements_path(@user.id), target: :_blank %>
-  </div>
-  <div>
-    <%= link_to "問題作成", new_user_question_path(@user.id) %>
-  </div>
-<% end %>
-
+  <% if user_signed_in? && (current_user.id == @user.id) %>
+    <div>
+      <%= link_to "タイマー", user_time_managements_path(@user.id), target: :_blank %>
+    </div>
+    <div>
+      <%= link_to "問題作成", new_user_question_path(@user.id) %>
+    </div>
+  <% end %>
+  <% unless user_signed_in? %>
+    <div>
+      タイマー機能、問題作成機能を利用する場合はログインしてください。
+    </div>
+  <% end %>
   <div>
     <%= link_to "#{@user.nickname}が作成した問題一覧", user_questions_path(@user.id) %>
   </div>
