@@ -2,11 +2,10 @@
 
 <%= @user.nickname %>
 <div>
+<% if user_signed_in? && (current_user.id == @user.id) %>
   <div>
     <%= link_to "タイマー", user_time_managements_path(@user.id), target: :_blank %>
   </div>
-
-<% if user_signed_in? && (current_user.id == @user.id) %>
   <div>
     <%= link_to "問題作成", new_user_question_path(@user.id) %>
   </div>
