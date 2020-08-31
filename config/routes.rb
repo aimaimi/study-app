@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    resources :time_managements, only: [:index, :create]
   end
-  resources :time_managements, only: [:index]
 end

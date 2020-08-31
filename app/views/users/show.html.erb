@@ -2,16 +2,19 @@
 
 <%= @user.nickname %>
 <div>
-  <div>
-    <%= link_to "タイマー", time_managements_path, target: :_blank %>
-  </div>
-
-<% if user_signed_in? && (current_user.id == @user.id) %>
-  <div>
-    <%= link_to "問題作成", new_user_question_path(@user.id) %>
-  </div>
-<% end %>
-
+  <% if user_signed_in? && (current_user.id == @user.id) %>
+    <div>
+      <%= link_to "タイマー", user_time_managements_path(@user.id), target: :_blank %>
+    </div>
+    <div>
+      <%= link_to "問題作成", new_user_question_path(@user.id) %>
+    </div>
+  <% end %>
+  <% unless user_signed_in? %>
+    <div>
+      タイマー機能、問題作成機能を利用する場合はログインしてください。
+    </div>
+  <% end %>
   <div>
     <%= link_to "#{@user.nickname}が作成した問題一覧", user_questions_path(@user.id) %>
   </div>
@@ -21,3 +24,13 @@
 </div>
 
 <h2>勉強時間</h2>
+<% @times.each do |time| %>
+  <div>
+    <%= time.date %>
+      <% if time.time >= 3600 %>
+        <%= "#{(time.time) / 3600}時間#{(time.time % 3600) / 60}分#{(time.time) % 60}秒" %>
+      <% else %>
+        <%= "#{(time.time % 3600) / 60}分#{(time.time) % 60}秒"%>
+      <% end %>
+  </div>
+<% end %>

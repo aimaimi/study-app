@@ -40,11 +40,12 @@
 - belongs_to :user
 - belongs_to :question
  
-## time_managers テーブル
+## time_managements テーブル
  
 | Column              | Type       | Options                        |
 | ------------------- | ------     | -------------------------------|
-| time                | time       | null: false                    |
+| date                | date       | null: false                    |
+| time                | integer    | null: false                    |
 | user_id             | references | null: false, foreign_key: true |
  
 - belongs_to :user
