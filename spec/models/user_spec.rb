@@ -29,7 +29,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'passwordが存在してもpassword_confirmationが空では存在できないこと' do
-      @user.password_confirmation = ""
+      @user.password_confirmation = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
     end
@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
       another_user = FactoryBot.build(:user)
       another_user.nickname = @user.nickname
       another_user.valid?
-      expect(another_user.errors.full_messages).to include("Nickname has already been taken")
+      expect(another_user.errors.full_messages).to include('Nickname has already been taken')
     end
 
     it 'emailに一意性があること' do
@@ -47,19 +47,19 @@ RSpec.describe User, type: :model do
       another_user = FactoryBot.build(:user)
       another_user.email = @user.email
       another_user.valid?
-      expect(another_user.errors.full_messages).to include("Email has already been taken")
+      expect(another_user.errors.full_messages).to include('Email has already been taken')
     end
 
     it 'emailは@を含んでいること' do
       @user.email = 'aiueo'
       @user.valid?
-      expect(@user.errors.full_messages).to include("Email is invalid")
+      expect(@user.errors.full_messages).to include('Email is invalid')
     end
 
     it 'passwordは6文字以上であること' do
       @user.password = 'abcde'
       @user.valid?
-      expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+      expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
     end
   end
 end

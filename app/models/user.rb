@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :answers
   has_many :time_managements
 
-  validates :nickname, {presence: true, uniqueness: true}
+  validates :nickname, { presence: true, uniqueness: true }
 
   def self.search(search)
     if search != ''

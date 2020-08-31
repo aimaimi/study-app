@@ -19,7 +19,7 @@ RSpec.describe Answer, type: :model do
     it 'feedback_idが1では保存できないこと' do
       @answer.feedback_id = 1
       @answer.valid?
-      expect(@answer.errors.full_messages).to include("Feedback must be other than 1")
+      expect(@answer.errors.full_messages).to include('Feedback must be other than 1')
     end
   end
 end

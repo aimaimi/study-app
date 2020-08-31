@@ -10,8 +10,6 @@ class TimeManagement < ApplicationRecord
   validates :time, numericality: { only_integer: true }
 
   def date_cannot_be_in_the_past
-    if date.present? && date < Date.today
-      errors.add(:date, "can't be in the past")
-    end
+    errors.add(:date, "can't be in the past") if date.present? && date < Date.today
   end
 end

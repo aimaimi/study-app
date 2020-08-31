@@ -23,15 +23,15 @@ RSpec.describe TimeManagement, type: :model do
     end
 
     it 'dateが過去の日付では保存できないこと' do
-      @time_management.date = "2020-08-30"
+      @time_management.date = '2020-08-30'
       @time_management.valid?
       expect(@time_management.errors.full_messages).to include("Date can't be in the past")
     end
 
     it 'timeが数値以外では保存できないこと' do
-      @time_management.time = "aiueo"
+      @time_management.time = 'aiueo'
       @time_management.valid?
-      expect(@time_management.errors.full_messages).to include("Time is not a number")
+      expect(@time_management.errors.full_messages).to include('Time is not a number')
     end
   end
 end
