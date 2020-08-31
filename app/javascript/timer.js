@@ -40,10 +40,10 @@ window.addEventListener('load', function(){
 
   function secWrite(int){
     if(int < 0){
-      cntReset();
       sound.play();
       alert("時間です！");
       studyTime();
+      cntReset();
     }else{
       document.timer.min.value = Math.floor(int / 60);
       document.timer.sec.value = int % 60;
@@ -53,6 +53,7 @@ window.addEventListener('load', function(){
   function cntReset(){
     document.timer.min.value = 0;
     document.timer.sec.value = 0;
+    count = 0;
     clearInterval(timer1);
   }
 
