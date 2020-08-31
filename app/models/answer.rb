@@ -5,7 +5,10 @@ class Answer < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :feedback
 
-  validates :answer, :feedback, presence: true
+  with_options presence: true do
+    validates :answer
+    validates :feedback_id
+  end
 
   validates :feedback_id, numericality: { other_than: 1 }
 end
