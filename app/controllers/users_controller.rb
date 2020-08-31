@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @times = @user.time_managements.where(user_id: @user.id)
     @graph = []
     @times.each do |time|
-      @graph << [time.date,time.time / 60]
+      @graph << [time.date, time.time / 60]
     end
   end
 
