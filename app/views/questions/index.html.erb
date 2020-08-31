@@ -2,7 +2,12 @@
 
 <h2>問題一覧</h2>
 <% unless user_signed_in? %>
+  <% if @questions.exists? %>
   ユーザーが作成した問題を解くにはログインしてください。
+  <% end %>
+<% end %>
+<% unless @questions.exists? %>
+  問題を作成しておりません。
 <% end %>
 <% @questions.each do |question| %>
   <div>
