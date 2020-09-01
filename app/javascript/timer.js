@@ -13,14 +13,14 @@ window.addEventListener('load', function(){
 
   start.addEventListener('click', function cntStart(){
     timer1 = setInterval(countDown, 1000);
+    stop.setAttribute("style", "display:inline;")
+    this.setAttribute("style", "display:none;")
   })
 
   stop.addEventListener('click', function cntStop(){
     clearInterval(timer1);
-  })
-
-  reset.addEventListener('click', function(){
-    cntReset();
+    this.setAttribute("style", "display:none;")
+    start.setAttribute("style", "display:inline;")
   })
 
   let countDown = function(){
@@ -58,6 +58,8 @@ window.addEventListener('load', function(){
     document.timer.min.value = 0;
     document.timer.sec.value = 0;
     count = 0;
+    stop.setAttribute("style", "display:none;")
+    start.setAttribute("style", "display:inline;")
     clearInterval(timer1);
   }
 
@@ -122,23 +124,23 @@ window.addEventListener('load', function(){
     const break_stop = document.getElementById("break_stop")
     const break_reset = document.getElementById("break_reset")
 
-    break_min = 0;
-    break_sec = 10;
-    document.break_timer.break_min.value = 0;
-    document.break_timer.break_sec.value = 10;
+    break_min = 5;
+    break_sec = 0;
+    document.break_timer.break_min.value = 5;
+    document.break_timer.break_sec.value = 0;
 
     breakCntStart();
 
     break_start.addEventListener('click', function breakCountStart(){
       timer2 = setInterval(breakCountDown, 1000);
+      this.setAttribute("style", "display:none;")
+      break_stop.setAttribute("style", "display:inline;")
     })
 
     break_stop.addEventListener('click', function breakCntStop(){
       clearInterval(timer2);
-    })
-  
-    break_reset.addEventListener('click', function(){
-      breakCntReset();
+      this.setAttribute("style", "display:none;")
+      break_start.setAttribute("style", "display:inline;")
     })
   }
 })
