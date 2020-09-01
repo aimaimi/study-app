@@ -1,16 +1,28 @@
 <%= render "shared/header" %>
 
 <h2>タイマー</h2>
+<div>
+  注意！ 0秒になった時に音がなります！
+</div>
+<h3>勉強用タイマー</h3>
 <form name="timer">
   <input type="text", id="min", name="min">分
   <input type="text", id="sec", name="sec">秒
   <div>
-    注意！ 0秒になった時に音がなります！
-  </div>
-  <div>
     <input type="button", value="スタート", id="start">
     <input type="button", value="ストップ", id="stop">
     <input type="button", value="リセット", id="reset">
+  </div>
+</form>
+
+<h3>休憩用タイマー</h3>
+<form name="break_timer">
+  <input type="text", id="break_min", name="break_min">分
+  <input type="text", id="break_sec", name="break_sec">秒
+  <div>
+    <input type="button", value="スタート", id="break_start">
+    <input type="button", value="ストップ", id="break_stop">
+    <input type="button", value="リセット", id="break_reset">
   </div>
 </form>
 
