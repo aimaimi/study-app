@@ -14,6 +14,8 @@
   <div class="hidden", id="feedback">
     <div>答え <%= @question.correct_answer %></div>
     <div><%= f.collection_select(:feedback_id, Feedback.all, :id, :name, {}, {}) %></div>
-    <div><%= f.submit "終了する" %></div>
+    <div><%= f.submit "解答を保存する" %></div>
   </div>
 <% end %>
+
+<%= link_to "戻る", user_questions_path(@user.id) %>

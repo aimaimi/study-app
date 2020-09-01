@@ -13,7 +13,6 @@ class AnswersController < ApplicationController
       @answer.save
       redirect_to user_questions_path(@user.id, @question.id)
     else
-      @question = Question.find(params[:question_id])
       render :new
     end
   end

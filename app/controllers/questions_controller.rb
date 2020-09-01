@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
       @question.save
       redirect_to user_path(current_user)
     else
+      @user = User.find(params[:user_id])
       render :new
     end
   end
@@ -53,6 +54,6 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:problem_statement, :correct_answer).merge(user_id: current_user.id)
+    params.permit(:problem_statement, :correct_answer).merge(user_id: current_user.id)
   end
 end
