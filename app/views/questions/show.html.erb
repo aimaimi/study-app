@@ -5,7 +5,7 @@
 <h2>答え</h2>
 <%= @question.correct_answer %>
 
-<% if user_signed_in? && (current_user.id == @question.user_id) %>
+<% if current_user.id == @question.user_id %>
   <div>
     <%= link_to "問題を編集する", edit_user_question_path(@user.id,@question.id) %>
   </div>
