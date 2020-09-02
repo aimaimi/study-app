@@ -11,10 +11,12 @@
   text-decoration: none;
   color: #333;
   font-size: 30px;
+  font-family: serif;
 }
 
 .devise-box{
   display: flex;
+  font-size: 20px;
 }
 
 .devise{

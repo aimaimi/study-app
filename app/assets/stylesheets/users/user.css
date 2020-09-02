@@ -1,0 +1,59 @@
+.explanation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explanation-box{
+  display: block;
+  background-image: url("../images/study.jpg");
+  background-size: cover;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  color: white;
+  justify-content: center;
+  width: 85vw;
+  height: 510px;
+  font-size: 25px;
+}
+
+.time-explanation{
+  padding: 45px 45px;
+}
+
+.test-explanation{
+  padding: 0px 0px 45px 45px;
+}
+
+.study-time-explanation{
+  padding: 0px 0px 45px 45px;
+}
+
+.user-list{
+  padding: 20px 0px 10px 30px;
+  font-size: 25px;
+}
+
+.user-list-explanation{
+  padding: 0px 0px 10px 20px;
+}
+
+.user-search-form{
+  padding: 0px 20px;
+}
+
+.user-search-field{
+  margin: 0px 10px 0px 0px;
+}
+
+.user-search-button{
+  padding: 0px 5px;
+}
+
+.user-name-box{
+  margin: 20px 0px 20px 30px;
+}
+
+.user-name{
+  text-decoration: none;
+  font-size: 20px;
+}
