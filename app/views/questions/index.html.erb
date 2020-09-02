@@ -1,5 +1,6 @@
 <%= render "shared/header" %>
 
+<%= @user.nickname %>
 <h2>問題一覧</h2>
 <% unless @questions.exists? %>
   問題を作成しておりません。
