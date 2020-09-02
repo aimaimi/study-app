@@ -54,6 +54,8 @@
 }
 
 .user-name{
+  color: #000;
   text-decoration: none;
   font-size: 20px;
+  padding: 6px;
 }

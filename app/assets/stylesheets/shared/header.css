@@ -22,5 +22,10 @@
 .devise{
   text-decoration: none;
   color: #333;
-  padding: 0px 20px;
+  padding: 7px 7px;
+  margin: 0px 20px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
 }
