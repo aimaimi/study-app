@@ -1,0 +1,17 @@
+.feedback-field{
+  width: 35vw;
+  height: 35px;
+}
+
+.new-answer-bottun{
+  margin: 15px 0px 0px 0px;
+  text-align: center;
+}
+
+.answer-question-bottun{
+  padding: 7px 7px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+}

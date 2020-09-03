@@ -1,21 +1,28 @@
 <%= render "shared/header" %>
-
-<%= form_with url: user_question_answers_path(@user.id,@question.id), local: true do |f| %>
-  <%= render 'shared/error_messages', model: @answer %>
-  <h3>問題</h3>
-  <div>
-    <%= @question.problem_statement %>
+<div class="question-background">
+  <div class="contents-row">
+    <div class="container">
+      <%= form_with url: user_question_answers_path(@user.id,@question.id), local: true do |f| %>
+        <%= render 'shared/error_messages', model: @answer %>
+        <h3 class="field">問題</h3>
+        <div>
+          <%= @question.problem_statement %>
+        </div>
+        <h3 class="field">解答</h3>
+        <%= f.text_area :answer, placeholder:"解答文", class:"question-field"%>
+        <div class="field", id="see_answer">
+          答えを見る
+        </div>
+        <div class="hidden", id="feedback">
+          <div>答え <%= @question.correct_answer %></div>
+          <div><%= f.collection_select(:feedback_id, Feedback.all, :id, :name, {}, {class:"feedback-field"}) %></div>
+          <div class="new-answer-bottun">
+            <%= f.submit "解答を保存する", class:"answer-question-bottun" %></div>
+          </div>
+        <div class="new-answer-bottun">
+          <%= link_to "戻る", user_questions_path(@user.id) %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <h3>解答</h3>
-  <%= f.text_area :answer, placeholder:"解答文"%>
-  <div id="see_answer">
-    答えを見る
-  </div>
-  <div class="hidden", id="feedback">
-    <div>答え <%= @question.correct_answer %></div>
-    <div><%= f.collection_select(:feedback_id, Feedback.all, :id, :name, {}, {}) %></div>
-    <div><%= f.submit "解答を保存する" %></div>
-  </div>
-<% end %>
-
-<%= link_to "戻る", user_questions_path(@user.id) %>
+</div>
