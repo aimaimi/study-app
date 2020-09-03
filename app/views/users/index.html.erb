@@ -24,6 +24,6 @@
 <% end %>
 <% @users.each do |user| %>
   <div class="user-name-box">
-    <%= link_to "･#{user.nickname}", user_path(user.id), class:"user-name" %>
+    <%= link_to "・#{user.nickname}", user_path(user.id), class:"user-name" %>
   </div>
 <% end %>

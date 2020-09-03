@@ -1,0 +1,60 @@
+.show{
+  margin: 0px 0px 0px 60px;
+  font-size: 20px;
+}
+
+.show-user-name{
+  font-size: 24px;
+}
+
+.link-sentence-box{
+  margin: 15px 0px 0px 15px;
+}
+
+.link-sentence{
+  text-decoration: none;
+  margin: 0px 20px 0px 0px;
+}
+
+.link-timer-explanation{
+  padding-left: 1em;
+}
+
+.link-question-create-explanation{
+  padding-left: 7em;
+}
+
+.link-question-index-explanation{
+  padding-left: 3em;
+}
+
+.link-user-list-explanation{
+  padding-left: 4em;
+}
+
+.study-time-box{
+  margin: 30px 0px 0px 0px;
+}
+
+.show-study-time{
+  font-size: 24px;
+}
+
+.study-time-graph{
+  width: 60vw;
+  margin: 15px 0px;
+}
+
+.show-study-time-box{
+  padding: 15px 0px 0px 15px;
+}
+
+.per-day-study-time{
+  font-size: 22px;
+  margin: 15px 0px 15px 0px;
+}
+
+.display-study-time{
+  margin: 10px 0px 0px 15px;
+}
+
