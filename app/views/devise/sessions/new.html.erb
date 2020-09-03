@@ -1,31 +1,35 @@
 <%= render "shared/header" %>
-
-<div class="contents row">
-  <div class="container">
-    <h2>Log in</h2>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%= flash[:notice] %>
-      <%= flash[:alert] %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.label :remember_me %><br />
-          <%= f.check_box :remember_me %>
+<div class="login-background">
+  <div class="contents-row">
+    <div class="container">
+      
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+        <div class="login">
+          ログイン
         </div>
-      <% end -%>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, class:"small-field"%>
+        </div>
 
-      <div class="actions">
-        <%= f.submit "Log in" %>
-      </div>
-    <% end %>
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off", class:"small-field"%>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.label :remember_me %><br />
+            <%= f.check_box :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="login">
+          <%= f.submit "ログイン", class:"login-bottun" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
