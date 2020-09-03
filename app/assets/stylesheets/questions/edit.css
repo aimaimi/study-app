@@ -1,24 +1,14 @@
-.question-background{
-  background-color: #e6ffe9;
-  height: 100vh;
-}
-
-.new-question{
+.edit-question{
   text-align: center;
   font-size: 21px;
 }
 
-.question-field{
-  height: 15vh;
-  width: 35vw;
-}
-
-.new-question-bottun{
+.edit-question-bottun{
   margin: 15px 0px 0px 0px;
   text-align: center;
 }
 
-.create-question-bottun{
+.update-question-bottun{
   padding: 7px 7px;
   border: 1px solid #ccc;
   background: #f1e767;
