@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="left-header">
+    <div class="site-title">
+      <%= link_to "Learning Efficiency", root_path, class:"title" %>
+    </div>
+  </div>
+  <div class="right-header">
+    <ul class="devise-box">
+      <% if user_signed_in? %>
+        <li ><%= link_to "マイページ", user_path(current_user.id), class:"devise" %></li>
+        <li ><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"devise"%></li>
+      <% else %>
+        <li ><%= link_to 'ログイン', user_session_path, class:"devise"%></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
