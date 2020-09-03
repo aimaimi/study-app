@@ -17,14 +17,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .login{
   text-align: center;
+  font-size: 21px;
 }
-
-
 
 .field{
   margin: 15px 0px 0px 0px; 
@@ -32,7 +31,7 @@
 }
 
 .small-field{
-  display: block;
+  width: 25vw;
 }
 
 .login-bottun{
