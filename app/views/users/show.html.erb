@@ -1,40 +1,52 @@
 <%= render "shared/header" %>
 
-<%= @user.nickname %>
-<div>
-  <% if user_signed_in? && (current_user.id == @user.id) %>
-    <div>
-      <%= link_to "タイマー", user_time_managements_path(@user.id), target: :_blank %>
+<div class="show">
+  <div class="show-background" >
+    <div class="show-background-box">
+      <span class="show-user-name"><%= "Name #{@user.nickname}" %></span>
+      <% if current_user.id == @user.id %>
+        <div class="link-sentence-box">
+          <%= link_to "勉強時間管理タイマー", user_time_managements_path(@user.id), class:"link-sentence", target: :_blank %>
+          <span class="link-timer-explanation">まずはタイマーセットから！</span>
+        </div>
+        <div class="link-sentence-box">
+          <%= link_to "問題作成", new_user_question_path(@user.id), class:"link-sentence" %>
+          <span class="link-question-create-explanation">覚えたいことを問題にしよう！</span>
+        </div>
+      <% end %>
+      <div class="link-sentence-box">
+        <%= link_to "作成した問題一覧", user_questions_path(@user.id), class:"link-sentence" %>
+        <span class="link-question-index-explanation">作った問題を解いてみよう！</span>
+      </div>
+      <div class="link-sentence-box">
+        <%= link_to "ユーザーリスト", root_path, class:"link-sentence" %>
+        <span class="link-user-list-explanation">他のユーザーが作った問題を解いてみよう！</span>
+      </div>
     </div>
-    <div>
-      <%= link_to "問題作成", new_user_question_path(@user.id) %>
-    </div>
-  <% end %>
-  <% unless user_signed_in? %>
-    <div>
-      タイマー機能、問題作成機能を利用する場合はログインしてください。
-    </div>
-  <% end %>
-  <div>
-    <%= link_to "#{@user.nickname}が作成した問題一覧", user_questions_path(@user.id) %>
   </div>
-  <div>
-    <%= link_to "ユーザーリスト", root_path %>
+
+  <div class="study-time-box">
+    <h2 class="show-study-time">勉強時間</h2>
+    <div class="show-study-time-box">
+      <div>
+        勉強用タイマーで経過した時間が勉強時間として記録されます。
+      </div>
+      <div class="per-day-study-time">
+        １日当たりの勉強時間（分）
+      </div>
+      <div class="study-time-graph">
+        <%= line_chart @graph, height: "350px" %>
+      </div>
+      <% @times.each do |time| %>
+        <div class="display-study-time">
+          <%= time.date %>
+            <% if time.time >= 3600 %>
+              <%= "#{(time.time) / 3600}時間#{(time.time % 3600) / 60}分#{(time.time) % 60}秒" %></span>
+            <% else %>
+              <%= "#{(time.time % 3600) / 60}分#{(time.time) % 60}秒"%>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
-
-<h2>勉強時間</h2>
-
-１日当たりの勉強時間（分）
-<%= line_chart @graph, width: "400px", height: "250px" %>
-
-<% @times.each do |time| %>
-  <div>
-    <%= time.date %>
-      <% if time.time >= 3600 %>
-        <%= "#{(time.time) / 3600}時間#{(time.time % 3600) / 60}分#{(time.time) % 60}秒" %>
-      <% else %>
-        <%= "#{(time.time % 3600) / 60}分#{(time.time) % 60}秒"%>
-      <% end %>
-  </div>
-<% end %>

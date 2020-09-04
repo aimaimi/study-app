@@ -1,0 +1,22 @@
+.signup-background{
+  background-color: #e6ffe9;
+  height: 100vh;
+}
+
+.signup{
+  text-align: center;
+  font-size: 21px;
+}
+
+.input-default{
+  width: 25vw;
+}
+
+.signup-bottun{
+  margin-top: 20px;
+  padding: 7px 7px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+}

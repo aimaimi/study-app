@@ -1,12 +1,15 @@
 <%= render "shared/header" %>
 
-<h2>ユーザーリスト</h2>
-<%= form_with url: search_users_path, local: true, method: :get do |form| %>
-  <%= form.text_field :keyword, placeholder: "ユーザーを検索する" %>
-  <%= form.submit "検索" %>
+<h2 class="user-list">ユーザーリスト</h2>
+<div class="user-list-explanation">
+  ユーザー名をクリックすると、それぞれのユーザーページへ移動できます。
+</div>
+<%= form_with url: search_users_path, local: true, method: :get, class:"user-search-form" do |form| %>
+  <%= form.text_field :keyword, placeholder: "ユーザーを検索する", class:"user-search-field" %>
+  <%= form.submit "検索", class:"user-search-button" %>
 <% end %>
 <% @users.each do |user| %>
-  <div>
-    <%= link_to "#{user.nickname}", user_path(user.id) %>
+  <div class="user-name-box">
+    <%= link_to "・#{user.nickname}", user_path(user.id), class:"user-name" %>
   </div>
 <% end %>

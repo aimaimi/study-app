@@ -1,0 +1,51 @@
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-box{
+  background-image: url("../images/timer.jpg");
+  background-size: cover;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  color: white;
+  height: 600px;
+  width: 90vw;
+  padding: 35px 35px;
+  font-size: 20px;
+  
+}
+
+.study-break-timer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0px 0px 0px;
+}
+
+.timer-title{
+  font-size: 24px;
+  margin: 0px 0px 20px 0px;
+}
+
+.study-bottun{
+  margin: 15px 0px 0px 15px;
+}
+
+.timer-bottun{
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+}
+
+.hidden-timer-bottun{
+  display: none;
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+}

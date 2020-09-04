@@ -1,0 +1,27 @@
+.question-background{
+  background-color: #e6ffe9;
+  height: 100vh;
+}
+
+.new-question{
+  text-align: center;
+  font-size: 21px;
+}
+
+.question-field{
+  height: 15vh;
+  width: 35vw;
+}
+
+.new-question-bottun{
+  margin: 15px 0px 0px 0px;
+  text-align: center;
+}
+
+.create-question-bottun{
+  padding: 7px 7px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+}

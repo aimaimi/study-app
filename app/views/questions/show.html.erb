@@ -1,42 +1,48 @@
 <%= render "shared/header" %>
 
-<h2>問題文</h2>
-<%= @question.problem_statement %>
-<h2>答え</h2>
-<%= @question.correct_answer %>
-
-<% if user_signed_in? && (current_user.id == @question.user_id) %>
-  <div>
-    <%= link_to "問題を編集する", edit_user_question_path(@user.id,@question.id) %>
+<div class="full-question-background">
+  <div class="contents-row">
+    <div class="show-container">
+      <div>
+        <h2 class=field>問題文</h2>
+        <%= @question.problem_statement %>
+        <h2 class="field">答え</h2>
+        <%= @question.correct_answer %>
+        <% if current_user.id == @question.user_id %>
+          <div class="center-question-bottun">
+            <div class="field">
+              <%= link_to "問題を編集する", edit_user_question_path(@user.id,@question.id), class:"show-question-bottun" %>
+            </div>
+            <div id="confirm_deletion" class="field">
+              <span class="show-question-bottun">問題を削除する</span>
+            </div>
+            <div class="hidden-confirmation", id="problem_delete">
+              本当に削除しますか？
+              <%= link_to "はい", user_question_path(@user.id,@question.id), method: :delete, class:"show-question-bottun" %>
+              <span id="quit" class="show-question-bottun">いいえ</span>
+            </div>
+          </div>
+        <% end %>
+        <div class="center-question-bottun">
+          <%= link_to "戻る", user_questions_path(@user.id) %>
+        </div>
+        <h2 class="field">今までの解答</h2>
+        <% i = 1 %>
+        <% @answers.each do |answer| %>
+          <div>
+            <div class="field">
+              <%= "#{i}回目の解答" %>
+            </div>
+            <div>
+              <%= answer.answer %>
+            </div>
+            <div>
+              <%= Feedback.find(answer.feedback_id).name %>
+            </div>
+          </div>
+          <% i = i + 1 %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div id="confirm_deletion">
-    問題を削除する
-  </div>
-  <div class="hidden", id="problem_delete">
-    本当に削除しますか？
-    <%= link_to "はい", user_question_path(@user.id,@question.id), method: :delete %>
-    <span id="quit">いいえ</span>
-  </div>
-<% end %>
-
-<div>
-  <%= link_to "戻る", user_questions_path(@user.id) %>
 </div>
-
-<h2>今までの解答</h2>
-<% i = 1 %>
-<% @answers.each do |answer| %>
-  <div>
-    <div>
-      <%= "#{i}回目の解答" %>
-    </div>
-    <div>
-      <%= answer.answer %>
-    </div>
-    <div>
-      <%= Feedback.find(answer.feedback_id).name %>
-    </div>
-  </div>
-  <% i = i + 1 %>
-<% end %>
-

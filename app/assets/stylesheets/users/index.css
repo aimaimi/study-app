@@ -1,0 +1,70 @@
+.explanation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explanation-box{
+  display: block;
+  background-image: url("../images/study.jpg");
+  background-size: cover;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  color: white;
+  justify-content: center;
+  width: 85vw;
+  height: 510px;
+  font-size: 25px;
+}
+
+.time-explanation{
+  padding: 45px 45px;
+}
+
+.test-explanation{
+  padding: 0px 0px 45px 45px;
+}
+
+.study-time-explanation{
+  padding: 0px 0px 45px 45px;
+}
+
+.user-list{
+  padding: 20px 0px 10px 30px;
+  font-size: 25px;
+}
+
+.user-list-explanation{
+  padding: 0px 0px 10px 20px;
+  font-size: 19px;
+}
+
+.user-search-form{
+  padding: 0px 20px;
+}
+
+.user-search-field{
+  margin: 0px 10px 0px 0px;
+  font-size: 20px;
+  width: 250px;
+}
+
+.user-search-button{
+  font-size: 18px;
+  color: #333;
+  padding: 7px 7px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+}
+
+.user-name-box{
+  margin: 20px 0px 20px 30px;
+}
+
+.user-name{
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 6px;
+}
