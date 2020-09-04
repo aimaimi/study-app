@@ -1,20 +1,31 @@
 <%= render "shared/header" %>
 
-<%= @user.nickname %>
-<h2>問題一覧</h2>
-<% unless @questions.exists? %>
-  問題を作成しておりません。
-<% end %>
-<% @questions.each do |question| %>
-  <div>
-    <%= question.problem_statement %>
-    <% if user_signed_in? %>
-      <%= link_to "詳細", user_question_path(@user.id,question.id) %>
-      <%= link_to "問題を解く", new_user_question_answer_path(@user.id,question.id) %>
-    <% end %>
+<div class="full-question-background">
+  <div class="contents-row">
+    <div class="index-container">
+      <div class="index-container-box">
+        <div class="index-user-name">
+          <%= "Name #{@user.nickname}" %>
+        </div>
+        <h2 class="index-question">問題一覧</h2>
+        <% unless @questions.exists? %>
+          問題を作成しておりません。
+        <% end %>
+        <% i = 1 %>
+        <% @questions.each do |question| %>
+          <div class="field">
+            <%= "問#{i} #{question.problem_statement}" %>
+          </div>
+          <div class="field">
+            <%= link_to "詳細", user_question_path(@user.id,question.id), class:"index-question-bottun" %>
+            <%= link_to "問題を解く", new_user_question_answer_path(@user.id,question.id), class:"index-question-bottun" %>
+          </div>
+          <% i += 1 %>
+        <% end %>
+        <div class="center-question-bottun">
+          <%= link_to "戻る", user_path(@user.id) %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<div>
-  <%= link_to "戻る", user_path(@user.id) %>
 </div>
