@@ -64,8 +64,6 @@ class QuestionsController < ApplicationController
 
   def move_to_show
     @user = User.find(params[:user_id])
-    unless current_user.id == @user.id
-      redirect_to action: :show
-    end
+    redirect_to action: :show unless current_user.id == @user.id
   end
 end
