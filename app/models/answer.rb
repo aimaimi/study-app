@@ -10,5 +10,5 @@ class Answer < ApplicationRecord
     validates :feedback_id
   end
 
-  validates :feedback_id, numericality: { other_than: 1 }
+  validates :feedback_id, numericality: { other_than: 1, message: 'を選択してください' }
 end
