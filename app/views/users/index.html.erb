@@ -22,8 +22,10 @@
   <%= form.text_field :keyword, placeholder: "ユーザーを検索する", class:"user-search-field" %>
   <%= form.submit "検索", class:"user-search-button" %>
 <% end %>
-<% @users.each do |user| %>
-  <div class="user-name-box">
-    <%= link_to "・#{user.nickname}", user_path(user.id), class:"user-name" %>
-  </div>
-<% end %>
+<div class="user-list-background">
+  <% @users.each do |user| %>
+    <div class="user-name-box">
+      <%= link_to "・#{user.nickname}", user_path(user.id), class:"user-name" %>
+    </div>
+  <% end %>
+</div>
