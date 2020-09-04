@@ -13,13 +13,13 @@ RSpec.describe Answer, type: :model do
     it 'answerが空では保存できないこと' do
       @answer.answer = nil
       @answer.valid?
-      expect(@answer.errors.full_messages).to include("Answer can't be blank")
+      expect(@answer.errors.full_messages).to include("解答を入力してください")
     end
 
     it 'feedback_idが1では保存できないこと' do
       @answer.feedback_id = 1
       @answer.valid?
-      expect(@answer.errors.full_messages).to include('Feedback must be other than 1')
+      expect(@answer.errors.full_messages).to include('問題の手応えを選択してください')
     end
   end
 end

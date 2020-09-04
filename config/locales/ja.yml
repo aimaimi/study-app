@@ -9,3 +9,7 @@ ja:
       answer:
         answer: 解答
         feedback_id: 問題の手応え
+      time_management:
+        date: 日付
+        time: 時間
+        

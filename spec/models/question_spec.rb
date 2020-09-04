@@ -13,13 +13,13 @@ RSpec.describe Question, type: :model do
     it 'problem_statementが空だと作成できないこと' do
       @question.problem_statement = nil
       @question.valid?
-      expect(@question.errors.full_messages).to include("Problem statement can't be blank")
+      expect(@question.errors.full_messages).to include("問題文を入力してください")
     end
 
     it 'correct_answerが空だと作成できないこと' do
       @question.correct_answer = nil
       @question.valid?
-      expect(@question.errors.full_messages).to include("Correct answer can't be blank")
+      expect(@question.errors.full_messages).to include("答えを入力してください")
     end
   end
 end
