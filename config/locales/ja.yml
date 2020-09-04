@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      question:
+        problem_statement: 問題文
+        correct_answer: 答え
+      answer:
+        answer: 解答
+        feedback_id: 問題の手応え
+      time_management:
+        date: 日付
+        time: 時間
+        

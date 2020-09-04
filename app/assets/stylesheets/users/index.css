@@ -28,6 +28,11 @@
   padding: 0px 0px 45px 45px;
 }
 
+.user-list-background{
+  background-color: #e6ffe9;
+  margin: 10px 0px;
+}
+
 .user-list{
   padding: 20px 0px 10px 30px;
   font-size: 25px;
@@ -56,6 +61,7 @@
   background: #f1e767;
   background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
   -webkit-box-shadow: inset 1px 1px 1px #fff;
+  cursor: pointer;
 }
 
 .user-name-box{

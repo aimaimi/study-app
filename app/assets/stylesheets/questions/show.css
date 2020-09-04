@@ -16,6 +16,7 @@
   background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
   -webkit-box-shadow: inset 1px 1px 1px #fff;
   color: black;
+  cursor: pointer;
 }
 
 .center-question-bottun{
