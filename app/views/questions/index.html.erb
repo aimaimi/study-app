@@ -5,7 +5,7 @@
     <div class="index-container">
       <div class="index-container-box">
         <div class="index-user-name">
-          <%= "Name #{@user.nickname}" %>
+          <%= "#{@user.nickname}さん" %>
         </div>
         <h2 class="index-question">問題一覧</h2>
         <% unless @questions.exists? %>

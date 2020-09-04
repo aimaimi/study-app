@@ -13,6 +13,10 @@
   font-size: 30px;
 }
 
+.header-user-name{
+  font-size: 24px;
+}
+
 .devise-box{
   display: flex;
   font-size: 20px;
