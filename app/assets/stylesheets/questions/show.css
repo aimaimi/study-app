@@ -1,0 +1,29 @@
+.show-container{
+  background-color: white;
+  margin: 70px 0px 0px 0px;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.show-question-bottun{
+  text-decoration: none;
+  padding: 7px 7px;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+  color: black;
+}
+
+.center-question-bottun{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.hidden-confirmation{
+  display: none;
+  margin-top: 15px;
+}

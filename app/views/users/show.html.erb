@@ -1,25 +1,27 @@
 <%= render "shared/header" %>
 
 <div class="show">
-  <span class="show-user-name"><%= @user.nickname %></span>
-  <div>
-    <% if current_user.id == @user.id %>
+  <div class="show-background" >
+    <div class="show-background-box">
+      <span class="show-user-name"><%= "Nickname #{@user.nickname}" %></span>
+      <% if current_user.id == @user.id %>
+        <div class="link-sentence-box">
+          <%= link_to "勉強時間管理タイマー", user_time_managements_path(@user.id), class:"link-sentence", target: :_blank %>
+          <span class="link-timer-explanation">まずはタイマーセットから！</span>
+        </div>
+        <div class="link-sentence-box">
+          <%= link_to "問題作成", new_user_question_path(@user.id), class:"link-sentence" %>
+          <span class="link-question-create-explanation">覚えたいことを問題にしよう！</span>
+        </div>
+      <% end %>
       <div class="link-sentence-box">
-        <%= link_to "・勉強時間管理タイマー", user_time_managements_path(@user.id), class:"link-sentence", target: :_blank %>
-        <span class="link-timer-explanation">まずはタイマーセットから！</span>
+        <%= link_to "作成した問題一覧", user_questions_path(@user.id), class:"link-sentence" %>
+        <span class="link-question-index-explanation">作った問題を解いてみよう！</span>
       </div>
       <div class="link-sentence-box">
-        <%= link_to "・問題作成", new_user_question_path(@user.id), class:"link-sentence" %>
-        <span class="link-question-create-explanation">覚えたいことを問題にしよう！</span>
+        <%= link_to "ユーザーリスト", root_path, class:"link-sentence" %>
+        <span class="link-user-list-explanation">他のユーザーが作った問題を解いてみよう！</span>
       </div>
-    <% end %>
-    <div class="link-sentence-box">
-      <%= link_to "・作成した問題一覧", user_questions_path(@user.id), class:"link-sentence" %>
-      <span class="link-question-index-explanation">作った問題を解いてみよう！</span>
-    </div>
-    <div class="link-sentence-box">
-      <%= link_to "・ユーザーリスト", root_path, class:"link-sentence" %>
-      <span class="link-user-list-explanation">他のユーザーが作った問題を解いてみよう！</span>
     </div>
   </div>
 
