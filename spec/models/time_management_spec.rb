@@ -13,19 +13,19 @@ RSpec.describe TimeManagement, type: :model do
     it 'dateが空では保存できないこと' do
       @time_management.date = nil
       @time_management.valid?
-      expect(@time_management.errors.full_messages).to include("日付を入力してください")
+      expect(@time_management.errors.full_messages).to include('日付を入力してください')
     end
 
     it 'timeが空では保存できないこと' do
       @time_management.time = nil
       @time_management.valid?
-      expect(@time_management.errors.full_messages).to include("時間を入力してください")
+      expect(@time_management.errors.full_messages).to include('時間を入力してください')
     end
 
     it 'dateが過去の日付では保存できないこと' do
       @time_management.date = '2020-08-30'
       @time_management.valid?
-      expect(@time_management.errors.full_messages).to include("日付は過去の日付にしないでください")
+      expect(@time_management.errors.full_messages).to include('日付は過去の日付にしないでください')
     end
 
     it 'timeが数値以外では保存できないこと' do
