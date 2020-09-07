@@ -37,15 +37,15 @@ asd123
 
 ### 問題作成機能
 
-・目的
+*目的
 
 自分で作成した問題を解くことで知識の定着を図る
 
-・詳細
+*詳細
 
 問題の作成を可能とする                                                                                              
 
-・ストーリー（ユースケース）
+*ストーリー（ユースケース）
 
 問題ごとに自分の解答履歴を確認できる
 
@@ -57,15 +57,15 @@ asd123
 
 ### タイマー機能
 
-・目的
+*目的
 
 勉強と休憩を時間で管理することで集中力を継続させる
 
-・詳細
+*詳細
 
 勉強時間を設定して、その時間が経過すると音が鳴り、休憩時間になることを知らせる
 
-・ストーリー（ユースケース）
+*ストーリー（ユースケース）
 
 他のページに遷移してしまうと、タイマーがリセットしてしまうため、タイマーページは新規タブで表示される
 
@@ -75,15 +75,15 @@ asd123
 
 ### 勉強時間管理機能
 
-・目的
+*目的
 
 今までの勉強時間を目視することでモチベーションを継続させる
 
-・詳細
+*詳細
 
 タイマー機能で経過した勉強時間を計測して、グラフで表示する
 
-・ストーリー（ユースケース）
+*ストーリー（ユースケース）
 
 休憩用タイマーで経過した時間は勉強時間に含めないようにする
 
@@ -93,15 +93,15 @@ asd123
 
 ### ユーザー検索機能
 
-・目的
+*目的
 
 ユーザーが他のユーザーを検索出来るようにする
 
-・詳細
+*詳細
 
 ユーザー名での検索を可能にする
 
-・ストーリー（ユースケース）
+*ストーリー（ユースケース）
 
 ユーザーは複数人いることが前提
 
@@ -136,48 +136,47 @@ https://gyazo.com/972b201889555a6cb0b5d1a2a3b73282
 
 ## ローカルでの動作方法
 
-git clone https://github.com/aimaimi/study-app.git
+1. git clone https://github.com/aimaimi/study-app.git
 
-cd study-app
+2. cd study-app
 
-bundle install
+3. bundle install
 
-yarn install
+4. yarn install
 
-rails db:create
+5. rails db:create
 
-rails db:migrate
+6. rails db:migrate
 
-rails s
+7. rails s
 
 ### パッケージ
 
 Ruby 2.6.5
 
-使用Gem
+#### 使用Gem
 
-devise
+*devise
 
-pry-rails
+*pry-rails
 
-active_hash
+*active_hash
 
-chartkick
+*chartkick
 
-rails-i18n
+*rails-i18n
 
-rubocop
+*rubocop
 
-capistrano
+*capistrano
 
-factory_bot_rails
+*factory_bot_rails
 
-faker
+*faker
 
-unicorn
+*unicorn
 
-
-AWS EC2
+#### AWS EC2
 
 Webサーバー Nginx
 
