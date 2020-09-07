@@ -108,11 +108,78 @@ asd123
 ## 実装した機能についてのGIFと説明
 実装した機能について、それぞれどのような特徴があるのか列挙しましょう。GIFを添えることで、イメージがしやすくなります。
 
+### 問題作成機能
+問題を作成し、それに対して解答、編集、削除ができる機能。解答した内容を閲覧可能。他のユーザーが作成した問題を解くこともできる。
+
+https://gyazo.com/86ae48c5277d35b2decc192feaf061a4
+
+### タイマー機能
+タイマーを使って、勉強時間終了と休憩時間終了をお知らせする機能。お知らせの際に、音が鳴り、ポップアップが表示されます。
+
+https://gyazo.com/99e56b6d0d35b0843228c71654f494af
+
+### 勉強時間管理機能
+タイマー機能の勉強用タイマーで経過した時間をマイページに記録する機能。グラフで日付ごとに勉強時間が確認できる。
+
+https://gyazo.com/a271d38d63abf6447d4ac192c3e75419
+
+### ユーザー検索機能
+ユーザーを検索することができる機能。
+
+https://gyazo.com/972b201889555a6cb0b5d1a2a3b73282
+
 ## 実装予定の機能
-洗い出した要件の中から、今後実装予定のものがあれば記述しましょう。
+
+作成した問題にタグを付け、それを元に検索や問題の整理をすることができる機能
+
+間違えた問題を抽出する機能
 
 ## ローカルでの動作方法
-git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述しましょう。この時、アプリケーション開発に使用した環境を併記することを忘れないでください（パッケージやRubyのバージョンなど）。
+
+git clone https://github.com/aimaimi/study-app.git
+
+cd study-app
+
+bundle install
+
+yarn install
+
+rails db:create
+
+rails db:migrate
+
+rails s
+
+### パッケージ
+
+Ruby 2.6.5
+
+使用Gem
+
+devise
+
+pry-rails
+
+active_hash
+
+chartkick
+
+rails-i18n
+
+rubocop
+
+capistrano
+
+factory_bot_rails
+
+faker
+
+unicorn
+
+
+AWS EC2
+
+Webサーバー Nginx
 
 ## データベース設計
 
