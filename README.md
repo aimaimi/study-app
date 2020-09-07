@@ -156,7 +156,7 @@ Ruby 2.6.5
 
 #### 使用Gem
 
-devise
+* devise
 
 * pry-rails
 
