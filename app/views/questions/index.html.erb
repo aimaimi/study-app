@@ -23,7 +23,12 @@
           <% i += 1 %>
         <% end %>
         <div class="center-question-bottun">
-          <%= link_to "戻る", user_path(@user.id) %>
+          <div>
+            <%= paginate @questions %>
+          </div>
+          <div>
+            <%= link_to "戻る", user_path(@user.id) %>
+          </div>
         </div>
       </div>
     </div>
