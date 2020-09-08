@@ -11,16 +11,14 @@
         <% unless @questions.exists? %>
           問題を作成しておりません。
         <% end %>
-        <% i = 1 %>
         <% @questions.each do |question| %>
           <div class="field">
-            <%= "問#{i} #{question.problem_statement}" %>
+            <%= "問題 #{question.problem_statement}" %>
           </div>
           <div class="field">
             <%= link_to "詳細", user_question_path(@user.id,question.id), class:"index-question-bottun" %>
             <%= link_to "問題を解く", new_user_question_answer_path(@user.id,question.id), class:"index-question-bottun" %>
           </div>
-          <% i += 1 %>
         <% end %>
         <div class="center-question-bottun">
           <div>

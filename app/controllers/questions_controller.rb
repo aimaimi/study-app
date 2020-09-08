@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @answers = @question.answers.where(user_id: current_user.id)
+    @answers = @question.answers.where(user_id: current_user.id).page(params[:page]).per(5)
     @user = User.find(params[:user_id])
   end
 

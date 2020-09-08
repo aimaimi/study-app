@@ -27,21 +27,17 @@
           <%= link_to "戻る", user_questions_path(@user.id) %>
         </div>
         <h2 class="field">今までの解答</h2>
-        <% i = 1 %>
         <% @answers.each do |answer| %>
           <div>
             <div class="field">
-              <%= "#{i}回目の解答" %>
-            </div>
-            <div>
               <%= answer.answer %>
             </div>
             <div>
               <%= Feedback.find(answer.feedback_id).name %>
             </div>
           </div>
-          <% i = i + 1 %>
         <% end %>
+        <%= paginate @answers %>
       </div>
     </div>
   </div>
