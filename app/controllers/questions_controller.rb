@@ -19,12 +19,12 @@ class QuestionsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @questions = Question.all.where(user_id: @user.id)
+    @questions = Question.all.where(user_id: @user.id).page(params[:page]).per(7)
   end
 
   def show
     @question = Question.find(params[:id])
-    @answers = @question.answers.where(user_id: current_user.id)
+    @answers = @question.answers.where(user_id: current_user.id).page(params[:page]).per(5)
     @user = User.find(params[:user_id])
   end
 

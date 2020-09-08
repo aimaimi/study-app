@@ -11,6 +11,7 @@
 .question-field{
   height: 15vh;
   width: 35vw;
+  resize: none;
 }
 
 .new-question-bottun{

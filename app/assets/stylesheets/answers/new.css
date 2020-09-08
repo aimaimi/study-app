@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+
 .answer-question-bottun{
   padding: 7px 7px;
   border: 1px solid #ccc;
@@ -16,4 +17,8 @@
   background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
   -webkit-box-shadow: inset 1px 1px 1px #fff;
   cursor: pointer;
+}
+
+.hidden-answer{
+  display: none;
 }
