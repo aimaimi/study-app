@@ -2,7 +2,8 @@
 <div class="question-background">
   <div class="contents-row">
     <div class="container">
-      <%= form_with model: [@user,@question], local: true do |f| %>
+      <%= form_with url: user_question_path(@user.id,@question.id), model: [@user,@question], method: :patch, local: true do |f| %>
+      <%= render 'shared/error_messages', model: @question %>
         <h2 class="edit-question">問題編集</h2>
         <h3 class="field">問題</h3>
         <%= f.text_area :problem_statement, placeholder:"問題文", class:"question-field" %>
