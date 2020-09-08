@@ -15,4 +15,5 @@
       <%= link_to "・#{user.nickname}", user_path(user.id), class:"user-name" %>
     </div>
   <% end %>
+  <span class="paginate-users"><%= paginate @users %></span>
 </div>
