@@ -174,6 +174,8 @@ Ruby 2.6.5
 
 * unicorn
 
+* kaminari
+
 #### AWS EC2
 
 Webサーバー Nginx
