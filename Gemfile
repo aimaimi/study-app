@@ -75,3 +75,5 @@ gem 'active_hash'
 gem 'chartkick'
 
 gem 'rails-i18n'
+
+gem 'kaminari'
