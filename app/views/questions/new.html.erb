@@ -6,7 +6,7 @@
         <h2 class="new-question">問題作成</h2>
         <%= render 'shared/error_messages', model: @question %>
         <h3 class="field">問題</h3>
-          <%= f.text_area :problem_statement, placeholder:"問題文", class:"question-field" %>
+          <%= f.text_area :problem_statement, placeholder:"問題文", class:"question-field", autofocus: true %>
         <h3 class="field">答え</h3>
           <%= f.text_area :correct_answer, placeholder:"答え", class:"question-field"%>
         <div class="new-question-bottun">

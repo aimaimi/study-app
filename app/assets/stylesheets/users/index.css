@@ -16,8 +16,12 @@
   font-size: 25px;
 }
 
-.time-explanation{
+.app-explanation{
   padding: 45px 45px;
+}
+
+.time-explanation{
+  padding: 0px 0px 45px 45px;
 }
 
 .test-explanation{
@@ -30,7 +34,8 @@
 
 .user-list-background{
   background-color: #e6ffe9;
-  margin: 10px 0px;
+  padding: 3px 0px;
+  margin: 10px 0px 40px 0px;
 }
 
 .user-list{
@@ -39,16 +44,16 @@
 }
 
 .user-list-explanation{
-  padding: 0px 0px 10px 20px;
+  padding: 0px 0px 10px 40px;
   font-size: 19px;
 }
 
 .user-search-form{
-  padding: 0px 20px;
+  padding: 0px 20px 0px 40px;
 }
 
 .user-search-field{
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 15px 0px;
   font-size: 20px;
   width: 250px;
 }

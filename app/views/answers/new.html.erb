@@ -9,7 +9,7 @@
           <%= @question.problem_statement %>
         </div>
         <h3 class="field">解答</h3>
-        <%= f.text_area :answer, placeholder:"解答文", class:"question-field"%>
+        <%= f.text_area :answer, placeholder:"解答文", class:"question-field", autofocus: true %>
         <div class="field", id="see_answer">
           <span class="answer-question-bottun">答えを見る</span>
         </div>
