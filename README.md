@@ -109,23 +109,22 @@ asd123
 ### 問題作成機能
 問題を作成し、それに対して解答、編集、削除ができる機能です。解答した内容を閲覧可能です。他のユーザーが作成した問題を解くこともできます。
 
-<img src="https://github.com/aimaimi/study-app/blob/master/question-create.gif" alt="問題作成機能gif" width="400" height="250">
+<img src="gifs/question-create.gif" alt="問題作成機能" width="650" height="400">
 
 ### タイマー機能
 タイマーを使って、勉強時間終了と休憩時間終了をお知らせする機能です。お知らせの際に、音が鳴り、ポップアップが表示されます。
 
-<img src="gifs/timer.gif" alt="タイマー機能gif" width="400" height="250">
-https://gyazo.com/99e56b6d0d35b0843228c71654f494af
+<img src="gifs/timer.gif" alt="タイマー機能" width="650" height="400">
 
 ### 勉強時間管理機能
 タイマー機能の勉強用タイマーで経過した時間をマイページに記録する機能です。グラフで日付ごとに勉強時間が確認できます。
 
-https://gyazo.com/a271d38d63abf6447d4ac192c3e75419
+<img src="gifs/study-time.png" alt="勉強時間管理機能" width="750" height="400">
 
 ### ユーザー検索機能
 ユーザーを検索することができる機能です。
 
-https://gyazo.com/972b201889555a6cb0b5d1a2a3b73282
+<img src="gifs/user-search.gif" alt="ユーザー検索機能" width="650" height="400">
 
 ## 実装予定の機能
 
