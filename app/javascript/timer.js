@@ -6,6 +6,14 @@ window.addEventListener('load', function(){
   const stop = document.getElementById("stop")
   const reset = document.getElementById("reset")
   const sound = document.getElementById("sound")
+  let min = document.getElementById("min").value
+  let sec = document.getElementById("sec").value
+
+  min = 50;
+  sec = 0;
+  document.timer.min.value = 50;
+  document.timer.sec.value = 0;
+
   let timer1;
   let count = 0;
 
