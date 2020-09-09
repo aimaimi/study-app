@@ -44,3 +44,19 @@
   background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
   -webkit-box-shadow: inset 1px 1px 1px #fff;
 }
+
+/* タブレット・スマホ表示時 */
+@media (max-width: 1024px) {
+  .title{
+    font-size: 28px;
+  }
+  .title-explanation{
+    font-size: 15px;
+  }
+  .header-user-name{
+    font-size: 20px
+  }
+  .devise-box{
+    font-size: 16px;
+  }
+}
