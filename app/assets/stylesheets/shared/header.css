@@ -9,8 +9,17 @@
 
 .title{
   text-decoration: none;
-  color: #333;
-  font-size: 30px;
+  color: #ff4f02;
+  font-weight: bold;
+  font-size: 33px;
+  padding: 1rem 2rem;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+}
+
+.title-explanation{
+  font-size: 18px;
+  margin: 0px 0px 0px 0px;
 }
 
 .header-user-name{
