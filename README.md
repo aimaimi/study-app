@@ -109,8 +109,7 @@ asd123
 ### 問題作成機能
 問題を作成し、それに対して解答、編集、削除ができる機能です。解答した内容を閲覧可能です。他のユーザーが作成した問題を解くこともできます。
 
-<img src="/Users/komurasyogo/projects/study-app/app/assets/images/question-create.gif" alt="問題作成機能gif" >
-https://gyazo.com/86ae48c5277d35b2decc192feaf061a4
+<img src="https://github.com/aimaimi/study-app/blob/master/question-create.gif" alt="問題作成機能gif" width="400" height="250">
 
 ### タイマー機能
 タイマーを使って、勉強時間終了と休憩時間終了をお知らせする機能です。お知らせの際に、音が鳴り、ポップアップが表示されます。
