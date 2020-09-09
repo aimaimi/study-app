@@ -28,6 +28,19 @@
   padding: 0px 0px 45px 45px;
 }
 
+.first-time{
+  margin: 20px 0px 0px 30px;
+}
+
+.first-time-user{
+  font-size: 25px;
+}
+
+.first-time-explanation{
+  font-size: 19px;
+  margin: 10px 0px 0px 10px;
+}
+
 .user-list-background{
   background-color: #e6ffe9;
   padding: 3px 0px;
