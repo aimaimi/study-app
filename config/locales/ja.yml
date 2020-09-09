@@ -12,7 +12,6 @@ ja:
       time_management:
         date: 日付
         time: 時間
-ja:
   views:
     pagination:
       first: "&laquo; 最初"

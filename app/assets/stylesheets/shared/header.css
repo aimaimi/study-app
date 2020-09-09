@@ -9,7 +9,7 @@
 
 .title{
   text-decoration: none;
-  color: #ff4f02;
+  color: black;
   font-weight: bold;
   font-size: 33px;
   padding: 1rem 2rem;
@@ -19,11 +19,14 @@
 
 .title-explanation{
   font-size: 18px;
-  margin: 0px 0px 0px 0px;
 }
 
 .header-user-name{
   font-size: 24px;
+}
+
+.right-header{
+  margin-right: 20px;
 }
 
 .devise-box{
@@ -35,7 +38,7 @@
   text-decoration: none;
   color: #333;
   padding: 7px 7px;
-  margin: 0px 20px;
+  margin: 0px 0px 0px 20px;
   border: 1px solid #ccc;
   background: #f1e767;
   background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
