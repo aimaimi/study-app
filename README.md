@@ -109,7 +109,7 @@ asd123
 ### 問題作成機能
 問題を作成し、それに対して解答、編集、削除ができる機能です。解答した内容を閲覧可能です。他のユーザーが作成した問題を解くこともできます。
 
-<img src="https://gyazo.com/86ae48c5277d35b2decc192feaf061a4" alt="問題作成機能gif" >
+<img src="file:///Users/komurasyogo/projects/study-app/app/assets/images/question-create.gif" alt="問題作成機能gif" >
 https://gyazo.com/86ae48c5277d35b2decc192feaf061a4
 
 ### タイマー機能
