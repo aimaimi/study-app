@@ -35,7 +35,6 @@ window.addEventListener('load', function(){
     let min = document.getElementById("min").value
     let sec = document.getElementById("sec").value
     count = count + 1
-    breakCntReset();
     if((min == "") && (sec == "")){
       alert("時間を設定してください！");
       reset();
