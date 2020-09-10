@@ -3,6 +3,9 @@
 <div class="full-question-background">
   <div class="contents-row">
     <div class="show-container">
+      <div class="index-user-name">
+        <%= "#{@user.nickname}さん" %>
+      </div>
       <div>
         <h2 class=field>問題文</h2>
         <%= @question.problem_statement %>
