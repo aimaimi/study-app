@@ -10,12 +10,12 @@
         <%= flash[:alert] %>
         <div class="field">
           <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autofocus: true, class:"small-field"%>
+          <%= f.email_field :email, autofocus: true, id:"email-form",class:"small-field"%>
         </div>
 
         <div class="field">
           <%= f.label :パスワード %><br />
-          <%= f.password_field :password, autocomplete: "off", class:"small-field"%>
+          <%= f.password_field :password, autocomplete: "off", id:"password-form",class:"small-field"%>
         </div>
 
         <% if devise_mapping.rememberable? %>

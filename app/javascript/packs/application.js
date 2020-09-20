@@ -10,6 +10,7 @@ require("channels")
 require("../answer")
 require("../timer")
 require("../delete")
+require("../login")
 require("chartkick")
 require("chart.js")
 
