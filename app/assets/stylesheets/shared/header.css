@@ -1,6 +1,6 @@
 .site-header{
   height: 100px;
-  width: 100vw;
+  width: 100%;
   padding: 0px 40px;
   display: flex; 
   justify-content: space-between;
