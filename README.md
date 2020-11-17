@@ -14,11 +14,11 @@ Learning Efficiency
 http://54.95.109.108
 
 ## テスト用アカウント
-メールアドレス
+メールアドレス（自動で入力されます）
 
-sample@sample.co.jp
+sample1@sample.co.jp
 
-パスワード
+パスワード（自動で入力されます）
 
 asd123
 
