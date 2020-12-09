@@ -1,5 +1,5 @@
 .login-background{
-  background-color: #e6ffe9;
+  /* background-color: #e6ffe9; */
   width: 100%;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .container{
-  background-color: white;
+  /* background-color: white; */
   margin: 70px 0px 0px 0px;
   width: 70vw;
   height: 70vh;
