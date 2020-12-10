@@ -6,6 +6,13 @@
 .new-question{
   text-align: center;
   font-size: 21px;
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+}
+
+.list-field{
+  margin: 15px 0px 0px 0px;
+  padding: .25em 0 .25em .75em;
+  border-left: 6px solid #a7d6ff;
 }
 
 .question-field{
