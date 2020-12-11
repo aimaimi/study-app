@@ -78,22 +78,6 @@ kaminariというgemを利用して実装しています。
 
 間違えた問題を抽出する機能。
 
-## ローカルでの動作方法
-
-1. git clone https://github.com/aimaimi/study-app.git
-
-2. cd study-app
-
-3. bundle install
-
-4. yarn install
-
-5. rails db:create
-
-6. rails db:migrate
-
-7. rails s
-
 ### パッケージ
 
 Ruby 2.6.5
