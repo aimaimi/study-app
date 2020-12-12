@@ -7,12 +7,12 @@
         <div class="index-user-name">
           <%= "#{@user.nickname}さん" %>
         </div>
-        <h2 class="index-question">問題一覧</h2>
+        <h2 class="index-question">問 題 一 覧</h2>
         <% unless @questions.exists? %>
           問題を作成しておりません。
         <% end %>
         <% @questions.each do |question| %>
-          <div class="field">
+          <div class="list-field">
             <%= "問題 #{question.problem_statement}" %>
           </div>
           <div class="field">

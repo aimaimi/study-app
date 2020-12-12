@@ -4,10 +4,10 @@
     <div class="container">
       <%= form_with url: user_question_path(@user.id,@question.id), model: [@user,@question], method: :patch, local: true do |f| %>
       <%= render 'shared/error_messages', model: @question %>
-        <h2 class="edit-question">問題編集</h2>
-        <h3 class="field">問題</h3>
+        <h2 class="edit-question">問 題 編 集</h2>
+        <h3 class="list-field">問題</h3>
         <%= f.text_area :problem_statement, placeholder:"問題文", class:"question-field", autofocus: true %>
-        <h3 class="field">答え</h3>
+        <h3 class="list-field">答え</h3>
         <%= f.text_area :correct_answer, placeholder:"答え", class:"question-field" %>
         <div class="edit-question-bottun">
           <%= f.submit "問題内容を更新", class:"update-question-bottun" %>

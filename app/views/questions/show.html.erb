@@ -7,9 +7,9 @@
         <%= "#{@user.nickname}さん" %>
       </div>
       <div>
-        <h2 class=field>問題文</h2>
+        <h2 class="list-field">問題文</h2>
         <%= @question.problem_statement %>
-        <h2 class="field">答え</h2>
+        <h2 class="list-field">答え</h2>
         <%= @question.correct_answer %>
         <% if current_user.id == @question.user_id %>
           <div class="center-question-bottun">
@@ -29,7 +29,7 @@
         <div class="center-question-bottun">
           <%= link_to "戻る", user_questions_path(@user.id) %>
         </div>
-        <h2 class="field">今までの解答</h2>
+        <h2 class="list-field">今までの解答</h2>
         <% @answers.each do |answer| %>
           <div>
             <div class="field">

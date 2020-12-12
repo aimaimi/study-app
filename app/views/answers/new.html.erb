@@ -4,17 +4,17 @@
     <div class="container">
       <%= form_with url: user_question_answers_path(@user.id,@question.id), local: true do |f| %>
         <%= render 'shared/error_messages', model: @answer %>
-        <h3 class="field">問題</h3>
+        <h3 class="list-field">問題</h3>
         <div>
           <%= @question.problem_statement %>
         </div>
-        <h3 class="field">解答</h3>
+        <h3 class="list-field">解答</h3>
         <%= f.text_area :answer, placeholder:"解答文", class:"question-field", autofocus: true %>
         <div class="field", id="see_answer">
           <span class="answer-question-bottun">答えを見る</span>
         </div>
         <div class="hidden-answer", id="feedback">
-          <div class="field">
+          <div class="list-field">
             答え <%= @question.correct_answer %>
           </div>
           <div>
