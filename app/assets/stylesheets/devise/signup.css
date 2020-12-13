@@ -5,11 +5,17 @@
 
 .signup{
   text-align: center;
-  font-size: 21px;
+  font-size: 25px;
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
 }
 
 .input-default{
-  width: 25vw;
+  width: 30vw;
+}
+
+.signup-field{
+  text-align: center;
+  font-size: 21px;
 }
 
 .signup-bottun{

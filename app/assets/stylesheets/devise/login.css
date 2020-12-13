@@ -22,7 +22,8 @@
 
 .login{
   text-align: center;
-  font-size: 21px;
+  font-size: 25px;
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
 }
 
 .field{
@@ -30,7 +31,12 @@
 }
 
 .small-field{
-  width: 25vw;
+  width: 30vw;
+}
+
+.login-field{
+  text-align: center;
+  font-size: 21px;
 }
 
 .login-bottun{

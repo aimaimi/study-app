@@ -8,24 +8,29 @@
         </div>
         <%= flash[:notice] %>
         <%= flash[:alert] %>
-        <div class="field">
+        <div class="list-field">
           <%= f.label :メールアドレス %><br />
+        </div>
+        <div>
           <%= f.email_field :email, autofocus: true, id:"email-form",class:"small-field"%>
         </div>
 
-        <div class="field">
+        <div class="list-field">
           <%= f.label :パスワード %><br />
+        </div>
+        <div>
           <%= f.password_field :password, autocomplete: "off", id:"password-form",class:"small-field"%>
         </div>
 
         <% if devise_mapping.rememberable? %>
-          <div class="field">
+          <div class="list-field">
             <%= f.label :ログインしたままにする %><br />
+          </div>
+          <div>
             <%= f.check_box :remember_me %>
           </div>
         <% end -%>
-
-        <div class="login">
+        <div class="login-field">
           <%= f.submit "ログイン", class:"login-bottun" %>
         </div>
       <% end %>
